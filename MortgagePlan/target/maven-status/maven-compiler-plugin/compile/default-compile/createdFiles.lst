@@ -1,0 +1,10 @@
+fi\codetest\mortgageplan\service\MortgageServiceImpl.class
+fi\codetest\mortgageplan\model\ErrorResponse.class
+fi\codetest\mortgageplan\model\MortgageRequest$MortgageRequestBuilder.class
+fi\codetest\mortgageplan\model\MortgageRequest.class
+fi\codetest\mortgageplan\restcontroller\MortgageController.class
+fi\codetest\mortgageplan\MortgagePlanApplication.class
+fi\codetest\mortgageplan\util\MortgageUtil.class
+fi\codetest\mortgageplan\service\MortgageService.class
+fi\codetest\mortgageplan\model\MortgageResponse$MortgageResponseBuilder.class
+fi\codetest\mortgageplan\model\MortgageResponse.class

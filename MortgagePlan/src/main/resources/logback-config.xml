@@ -1,0 +1,39 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <!--<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+            <pattern> %d{yyyy-MM-dd HH:mm:ss.SSS} [manageIdentifier] [RequestId-%X{MDC}] %-5p %c:%L - %m%n </pattern>
+            <!--<pattern>{"type":"${TYPE}", "host":"${HOST}", "level":"%replace(%level){TRACE,DEBUG}", "neid":"${NEID}", "system":"${SYSTEM}", "time":"%d{yyyy-MM-dd'T'HH:mm:ss.SSS'Z', UTC}", "timezone":"${TIMEZONE}", "log":"%msg"}%n</pattern>
+           -->
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework.jms" level="error" />
+    <logger name="org.springframework" level="error" />
+
+    <!--<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>app.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern> %d{yyyy-MM-dd HH:mm:ss.SSS} [manageIdentifier] [RequestId-%X{MDC}] %-5p %c:%L - %m%n </pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <FileNamePattern>/tmp/test.%i.log.zip</FileNamePattern>
+            <MinIndex>1</MinIndex>
+            <MaxIndex>10</MaxIndex>
+        </rollingPolicy>
+
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>2MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>-->
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+        <!--<appender-ref ref="FILE" />-->
+    </root>
+
+</configuration>
